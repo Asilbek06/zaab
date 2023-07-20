@@ -1,0 +1,282 @@
+.fourth {
+    padding-top: 0px;
+}
+
+.questions {
+
+    .centr {
+        text-align: center;
+        color: #fff;
+        font-family: var(--tt-font);
+
+        h1 {
+            font-size:60px;
+        }
+
+        p {
+            color: #000;
+            font-family: var(--p-regular);
+            font-size: 18px;
+
+            a {
+                font-family: var(--p-bold);
+            }
+        }
+    }
+}
+
+
+
+.accordion {
+    width: 100%;
+    border-radius: 16px;
+    margin-top: 5%;
+}
+
+.accordion .contentBx {
+    position: relative;
+    margin: 10px;
+    border-top: 1px  solid grey;
+}
+
+.accordion .contentBx .label{
+    position: relative;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.label {
+    font-family: var(--p-bold);
+    font-size: 2rem;
+    margin: 1rem 0px;
+    p {
+        margin: 0rem;
+    }
+}
+
+.accordion .contentBx .label::before {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: 1s;
+    color: #000;
+    font-size: 40px;
+}
+
+.content::-webkit-scrollbar {
+    width: 0;
+    
+}
+
+.accordion .contentBx.active .label::before
+ {
+    transform: rotate(135deg);
+    transition: .7s ease-out;
+    top: 0%;
+ }
+
+.accordion .contentBx .content {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+    overflow-y: auto;
+    font-size: 24px;
+    color: #fff;
+    width: 80%;
+    font-family: var(--p-bold);
+}
+
+.accordion .contentBx.active .content {
+    height: 150px;
+    padding: 20px;
+}
+
+.accordion .contentBx.active  {
+    background-color: #CACACA;
+}
+
+.centr {
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    font-family: var(--p-bold);
+}
+
+
+@media (max-width:1024px) {
+    .questions {
+        .centr {
+            h1 {
+                font-size: 55px;
+            }
+
+            p {
+                font-size: 17px;
+            }
+        }
+    }
+
+    .locals {
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .get {
+        .btns {
+            grid-template-columns: repeat(2,1fr);
+            .get-btn {
+                margin: 10px;
+                padding: 1.5rem 0;
+
+                p {
+                    margin: 20px 0px;
+                }
+            }
+        }
+    }
+
+    .label {
+        font-size: 1.4rem;
+        margin: .7rem 0rem;
+        margin-bottom: 0px;
+    }
+
+    .accordion .contentBx.active .content {
+        height: 100px;
+    }
+
+    .content {
+        p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        
+    }
+
+    .accordion .contentBx .label::before {
+        font-size: 30px;
+    }
+}
+
+@media (max-width:768px) {
+    .fourth {
+        padding: 0px;
+        min-height: 100vh;
+    }
+    .questions {
+        .centr {
+            h1 {
+                font-size: 45px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .locals {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .get {
+        .btns {
+            grid-template-columns: auto;
+        }
+    }
+
+    .label {
+        font-size: 1.2rem;
+    }
+
+    .accordion .contentBx.active .content {
+        height: 80px;
+    }
+
+    .content {
+        p {
+            font-size: 16px;
+            margin-top: 0px;
+        }
+    }
+}
+
+@media (max-width:650px) {
+    .label {
+        font-size: 1.1rem;
+    }
+
+    .questions {
+        .centr {
+            h1 {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .locals {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .content {
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .accordion .contentBx .label::before {
+        font-size: 25px;
+    } 
+}
+
+@media (max-width:570px) {
+    .label p{
+        width: 70%;
+        overflow:hidden;
+        display:inline-block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-height: 24px;
+    }
+
+    .accordion .contentBx.active > .label p {
+        min-height: 50px;
+        white-space: pre-wrap;
+    }
+
+    .questions {
+        .centr {
+            h1 {
+                font-size: 35px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .locals {
+        grid-template-columns: auto;
+
+        .local-btn{
+            padding: 20px;
+        }
+    }
+
+}
+
+@media (max-width:375px) {
+    .get {
+        margin: auto;
+        width: auto;
+    }
+}

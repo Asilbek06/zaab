@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'gilory-b';
+    src: url(/fonts/gilory/Gilroy-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'gilory-r';
+    src: url(/fonts/gilory/Gilroy-Regular.ttf);
+    src: url(/fonts/gilory/Gilroy-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'octo';
+    src: url(/fonts/tt_octosquares/TT\ Octosquares\ Trial\ Expanded\ Medium.ttf);
+}
+
+:root {
+    --main-color : #E1213C;
+    --bg-color: #2b2b2b ;
+    --second-bg-color :#1f1f1f;
+    --text-color: #000;
+    --second-text-color : #d7d7d7;
+    --tt-font: 'octo';
+    --p-bold: 'gilory-b';
+    --p-regular: 'gilory-r';
+}

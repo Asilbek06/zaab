@@ -1,0 +1,133 @@
+.first {
+    min-height: 50vh;
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        text-transform: uppercase;
+    
+        .flex-l h1{
+            position: relative;
+            font-family: var(--p-bold);
+            font-size: 55px;
+            
+    
+            .bottom-color {
+                border-bottom: 10px solid var(--main-color);
+                height: 80px;
+            }
+        }
+    
+            .rv-btn {
+                display: inline-block;
+                position: relative;
+                height: 70px;
+                width: 190px;
+                cursor: pointer;
+                .flexl-btn {
+                    position: absolute;
+                    left: 20%;
+                    top: 20%;
+                    margin: auto;
+                    color: #fff;
+                    font-family: var(--tt-font);
+                    font-size: 24px;
+                }
+            }
+            .none1 {
+                display: none;
+                height: 100px;
+                width: 100%;
+                padding-bottom: 2rem;
+            }
+        
+    }
+}
+
+.on {
+    display: none;
+}
+
+.off {
+    display: block;
+}
+
+@media (max-width:1024px) {
+    .first {
+        .flex {
+            .flex-l {
+                .rv-btn {
+                    height: 60px;
+                    width: 150px;
+                    img {
+                        height: 60px;
+                        width: 150px;
+                    }
+                    .flexl-btn {
+                        position: absolute;
+                        left: 16%;
+                        margin: auto;
+                        color: #fff;
+                        font-family: var(--tt-font);
+                        font-size: 24px;
+                    }
+                }
+            }
+            .flex-l h1{
+                font-size: 35px;
+            }
+        }
+        .flex-r img{
+            width: 95%;
+        }
+
+        .brn {
+            display: none;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .first {
+        .flex {
+            flex-direction: column-reverse;
+            .flex-l {
+                .rv-btn {
+                    display: flex;
+                    justify-content: center;
+                    width: auto;
+                    height: auto;
+                    margin: 1rem 0rem;
+
+                    .flexl-btn {
+                        left: auto;
+                    }
+                }
+                
+            }
+            .flex-l h1{
+                font-size: 40px;
+                text-align: center;
+            }
+
+
+            .flex-r img{
+                width:100%;
+            }
+    
+            .brn {
+                display: none;
+            }
+           
+
+        }
+    }
+    .on {
+        display: block;
+    }
+    
+    .off {
+        display: none;
+    }
+}
